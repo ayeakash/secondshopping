@@ -11,8 +11,8 @@ class NavBar extends Component{
                <div className="containt_main">
                   
                <Link to='/categories'>
-                              <i className="fa fa-shopping-cart"></i>
-                              <span className="padding_10">Categories
+                             
+                              <span className="padding_10">LOGO
                               
                               </span></Link>
                            
@@ -37,15 +37,15 @@ class NavBar extends Component{
                      <div className="login_menu">
                         <ul> 
                            <li><Link to='/categories'>
-                              <i className="fa fa-shopping-cart"></i>
+                              
                               <span className="padding_10">Categories</span></Link>
                            </li>
                            <li><Link to='/cart'>
-                              <i className="fa fa-shopping-cart"></i>
+                             
                               <span className="padding_10">Cart</span></Link>
                            </li>
                            <li><Link to='/orders'>
-                              <i className="fa fa-user"></i>
+                             
                               <span className="padding_10">Orders</span></Link>
                            </li>
                         </ul>

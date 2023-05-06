@@ -7,11 +7,12 @@ import App from './App';
 import Categories from './components/categories';
 import Orders from './components/orders';
 import Cart from './components/cart'
+import NavBar from './components/navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div className="container">
-    
+    {/* <NavBar></NavBar> */}
   <BrowserRouter >
   <Routes>
   

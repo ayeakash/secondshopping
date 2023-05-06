@@ -11,11 +11,7 @@ function App() {
   return (
     <React.Fragment>
       <div className="App container m-3" src={banner} >
-    
-      <div>
-      <p>Logo</p>
-      </div>
-      <NavBar></NavBar>
+    <NavBar></NavBar>
       <div>
         <Banner></Banner>
       </div>

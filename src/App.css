@@ -3,7 +3,13 @@
   grid-template-columns: auto auto auto;
 }
 
+.padding_10{
+  color: white;
+}
 
+.header-section{
+  font-family: 'Oswald', sans-serif;
+}
 
 .App {
   text-align: center;

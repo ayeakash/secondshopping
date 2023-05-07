@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CartItem from '../components/cartItem'
+import PriceDetails from './subComponents/priceDetails';
 
 class Cart extends Component {
     state = {  } 
@@ -8,14 +9,24 @@ class Cart extends Component {
             <div className='cart-parent'>
             <h1 className='cart-child'>My Cart</h1>
             <div className='address-parent'>
-                <h1 className='address-child'>Address</h1>
+                <div className='address-child'>
+                <ul>
+                    <li>
+                    <h3>Address: Akash Markad, 411007
+                    </h3>
+                    </li>
+                    <li>
+                    <p>Office No 04, First floor, Business...</p>
+                    </li>
+                </ul>
+            </div>
             </div>
             <CartItem></CartItem>
-            <button className='btn btn-primary'>+</button>
-            <button className='btn btn-danger'>-</button>
-            <button className='total-btn'>Total</button>
-            <button className='total-btn'>Place Order</button>
-
+            <CartItem></CartItem>
+            <CartItem></CartItem>
+            <PriceDetails></PriceDetails>
+            <button className='total-btn btn btn-secondary'>Total</button>
+            <button className='total-btn btn btn-secondary'>Place Order</button>
 
             
             

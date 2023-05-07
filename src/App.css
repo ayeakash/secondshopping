@@ -1,3 +1,103 @@
+.cart-image{
+  height: 100px;
+  width: 100px;
+  background-color: white;
+  object-fit: contain;
+  margin: 0 0 3px 0 ;
+}
+
+.btn-grid-parent{
+  display: grid;
+  grid-template-columns: 20px 20px;
+}
+
+.cart-item-parent{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 160px;
+  background-color: #61dafb;
+  margin: 0.3%;
+  padding-left: 2%;
+  padding: 1% 1% 1% 2%;
+}
+
+.price-grid{
+  display: grid;
+  grid-template-columns: 80px 80px 80px;
+  text-align: left;
+}
+
+.cart-item-child-1{
+  text-align: left;
+  padding-left: 10px;
+}
+
+.order-parent{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-items: left;
+  align-items: left;
+}
+
+
+.containt_main {
+  display: flex;
+  background-color: #2874f0;
+  align-items: center;
+  padding: 1%;
+}
+
+.order-child{
+  justify-self: left;
+  align-self: center;
+}
+
+.cart-item{
+  width: 90%;
+  background-color: antiquewhite;
+  height: 20vh;
+  margin: 0.3%;
+  padding: 2%;
+}
+
+.address-parent{
+  display: grid;
+  width: 100%;
+  background-color: beige;
+  height: 50px;
+  margin: 0.3%;
+  padding-left: 2%;
+  grid-template-rows: auto auto;
+  
+  
+}
+
+.address-child{
+  padding: 5px 0 0 0 ;
+  line-height: 2;
+}
+
+.address-change-btn{
+  grid-row: 1/2;
+}
+
+.order-parent{
+  width: 90%;
+  height: min-content;
+  background-color: bisque;
+  color: #390000;
+  text-align: left;
+  padding: 3%;
+  margin: 2%;
+  justify-self: center;
+  align-self: center;
+  
+  
+}
+
+
+
+
 .align-parent{
   display: grid;
   grid-template-columns: auto auto auto;

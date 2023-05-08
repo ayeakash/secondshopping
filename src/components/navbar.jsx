@@ -7,12 +7,11 @@ class NavBar extends Component{
     render() { 
         return ( 
                 <div className="header_section">
-                <div className="container">
                <div className="containt_main">
                   
-               <Link to='/categories'>
+               <Link to='/test'>
                              
-                              <span className="padding_10">LOGO
+                              <span className="padding_10">TEST
                               
                               </span></Link>
                            
@@ -53,7 +52,6 @@ class NavBar extends Component{
                   </div>
                </div>
             </div>
-         </div>
          );
     }
 }

@@ -1,3 +1,22 @@
+/* .alice-carousel__wrapper{
+  
+  height: 250px !important;
+} */
+
+.alice-carousel__dots{
+  margin: 3px !important;
+  padding: 3px;
+}
+
+.image-slide{
+  padding: 0.3%;
+  width: 100%;
+  margin: 1%;
+  
+}
+
+
+
 .cart-image{
   height: 100px;
   width: 100px;
@@ -45,6 +64,8 @@
   background-color: #2874f0;
   align-items: center;
   padding: 1%;
+  width: 100%;
+  margin-left: 1%;
 }
 
 .order-child{
@@ -68,8 +89,6 @@
   margin: 0.3%;
   padding-left: 2%;
   grid-template-rows: auto auto;
-  
-  
 }
 
 .address-child{

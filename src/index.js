@@ -8,6 +8,7 @@ import Categories from './components/categories';
 import Orders from './components/orders';
 import Cart from './components/cart'
 import NavBar from './components/navbar';
+import Carousel from './components/subComponents/carousel';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
   <Route path='/categories' element={<Categories/>}></Route>
   <Route path='/cart' element={<Cart/>}></Route>
   <Route path='/orders' element={<Orders/>}></Route>
+  <Route path='/test' element={<Carousel/>}></Route>
 
   </Routes>
   </BrowserRouter>

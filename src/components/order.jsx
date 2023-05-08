@@ -7,7 +7,7 @@ class Order extends Component {
         return (
             <React.Fragment>
             <div className='order-parent'>
-                <img src={shirt} alt="Product Image" className='order-child'/>
+                <img src={shirt} alt="Product" className='order-child'/>
                 <div className='order-child'>
                 <p>Order status</p> 
                 <p>Product Name</p>

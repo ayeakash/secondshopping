@@ -9,9 +9,9 @@ class NavBar extends Component{
                 <div className="header_section">
                <div className="containt_main">
                   
-               <Link to='/test'>
+               <Link to='/login'>
                              
-                              <span className="padding_10">TEST
+                              <span className="padding_10">LOGIN
                               
                               </span></Link>
                            

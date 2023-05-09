@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import shirt from '../startup/images/tshirt-img.png'
+import { Button } from '@mui/material';
 
 class Product extends Component {
     state = {  } 
@@ -20,7 +21,7 @@ class Product extends Component {
                                  {/* style="color: #262626;" */}
                                  <div className="tshirt_img"><img src={shirt} alt='This is a product image'/></div>
                                  <div className="btn_main">
-                                    <button className='btn btn-primary m-2'>Buy Now</button>
+                                    <Button variant="contained">Buy Now</Button>
                                     <button className='btn btn-outline-secondary m-2'>See More</button>
                                  </div>
                               </div> 

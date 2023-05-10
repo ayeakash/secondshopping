@@ -1,5 +1,11 @@
 
-
+.product-parent-div{
+ width: 300px;
+ background: #61dafb;
+ text-align: center;
+ padding: 5px;
+ box-shadow: #282c34;
+}
 
 /* .alice-carousel__wrapper{
   
@@ -18,7 +24,9 @@
   
 }
 
-
+label[data-shrink="false"] + .MuiInputBase-formControl .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  height: auto;
+}
 
 .cart-image{
   height: 100px;

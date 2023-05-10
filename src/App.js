@@ -10,6 +10,9 @@ import Carousel from './components/subComponents/carousel';
 
 
 
+
+
+
 function App() {
   return (
     <React.Fragment>
@@ -17,6 +20,8 @@ function App() {
     <NavBar></NavBar>
       <div className='image-slide'>
         <Carousel></Carousel>
+        
+          
         
       </div>
       <div className ="align-parent">

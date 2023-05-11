@@ -8,11 +8,24 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import HomeIcon from '@mui/icons-material/Home'
 import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 
 export default function FixedBottomNavigation() {
   const [value, setValue] = React.useState(0);
   const ref = React.useRef(null);
+  const navigate = useNavigate();
+
+  const handleClick = (path) =>{
+
+    navigate(path)
+  }
+
+  
+
+
   return (
     <Box sx={{ pb: 7 }} ref={ref}>
       <CssBaseline />
@@ -24,10 +37,11 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-          <BottomNavigationAction label="Search" icon={<SearchIcon />} />
-          <BottomNavigationAction label="Orders" icon={<FavoriteIcon />} />
-          <BottomNavigationAction label="Cart" icon={<ShoppingCartIcon />} />
+          <BottomNavigationAction label="Home" onClick={()=>handleClick('/home')} icon={<HomeIcon />} />
+          <BottomNavigationAction label="Search" onClick={()=>handleClick('/search')} icon={<SearchIcon />} />
+          <BottomNavigationAction label="Orders" onClick={()=>handleClick('/orders')} icon={<FavoriteIcon />} />
+
+          <BottomNavigationAction label="Cart" onClick={()=>handleClick('/cart')} icon={<ShoppingCartIcon />} />
         </BottomNavigation>
       </Paper>
     </Box>

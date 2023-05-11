@@ -37,7 +37,7 @@ export default function FixedBottomNavigation() {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="Home" onClick={()=>handleClick('/home')} icon={<HomeIcon />} />
+          <BottomNavigationAction label="Home" onClick={()=>handleClick('/')} icon={<HomeIcon />} />
           <BottomNavigationAction label="Search" onClick={()=>handleClick('/search')} icon={<SearchIcon />} />
           <BottomNavigationAction label="Orders" onClick={()=>handleClick('/orders')} icon={<FavoriteIcon />} />
 

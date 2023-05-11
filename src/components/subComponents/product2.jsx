@@ -1,16 +1,16 @@
-import { Card } from 'antd';
-import phone from '../../images/mobile-img.png'
+import React, { Component } from 'react';
+import shirt from '../../images/dress-shirt-img.png'
+
+class Product2 extends Component {
+  state = {  } 
+  render() { 
+    return (
+      <div className='product-parent-div'>
+        
+        This is working, right? 
+      </div>
+    );
+  }
+}
  
-const Product2 = () => (
-  <Card
-    hoverable
-    style={{
-      width: 240,
-    }}
-    cover={<img alt="example" src={phone}/>}
-  >
-    <button className='btn btn-secondary'>Add to Cart</button>
-    <button className='btn btn-secondary'>Buy Now</button>
-  </Card>
-);
 export default Product2;

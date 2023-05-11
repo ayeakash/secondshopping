@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PrimarySearchAppBar from './subComponents/topNavBar';
 import FixedBottomNavigation from './subComponents/bottomNavbar';
 import Product2 from './subComponents/product2';
+import ProductList from './subComponents/productList';
 
 class Categories extends Component {
     state = {  } 
@@ -11,6 +12,7 @@ class Categories extends Component {
                 <span className='top-bar'>
             <PrimarySearchAppBar></PrimarySearchAppBar>
                 </span>
+                {/* <ProductList></ProductList> */}
             <div className='grid-container'>
                 <div className='grid-item'>
                 <Product2></Product2>
@@ -18,27 +20,8 @@ class Categories extends Component {
                 <div className='grid-item'>
                 <Product2></Product2>
                 </div>
-                <div className='grid-item'>
-                <Product2></Product2>
-                </div>
-                <div className='grid-item'>
-                <Product2></Product2>
-                </div>
-                <div className='grid-item'>
-                <Product2></Product2>
-                </div>
-                <div className='grid-item'>
-                <Product2></Product2>
-                </div>
-                <div className='grid-item'>
-                <Product2></Product2>
-                </div>
-                <div className='grid-item'>
-                <Product2></Product2>
-                </div>
-                <div className='grid-item'>
-                <Product2></Product2>
-                </div>
+                
+                
                 
             </div>
                 

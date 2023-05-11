@@ -1,40 +1,39 @@
-import React, { Component } from 'react';
-import shirt from '../startup/images/tshirt-img.png'
-import { Button } from '@mui/material';
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { Button, CardActionArea, CardActions } from '@mui/material';
+import shirt from '../images/tshirt-img.png'
 
-class Product extends Component {
-    state = {  } 
-    render() { 
-        return (
-            <div className="fashion_section">
-         <div id="main_slider" className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner">
-               <div className="carousel-item active">
-                  <div className="container">
-                    
-                     <div className="fashion_section_2">
-                        <div className="row">
-                           <div className="col-lg-4 col-sm-4">
-                              <div className="box_main">
-                                 <h4 className="shirt_text">Man T -shirt</h4>
-                                 <p className="price_text">Price  <span >$ 30</span></p>
-                                 {/* style="color: #262626;" */}
-                                 <div className="tshirt_img"><img src={shirt} alt='This is a product image'/></div>
-                                 <div className="btn_main">
-                                    <Button variant="contained">Buy Now</Button>
-                                    <button className='btn btn-outline-secondary m-2'>See More</button>
-                                 </div>
-                              </div> 
-                           </div>
-                           </div>
-                           </div>
-                           </div>
-                           </div>
-                           </div>
-                           </div>
-                           </div>
-        );
-    }
+export default function MultiActionAreaCard() {
+  return (
+    <Card sx={{ maxWidth: 300, margin: 2 }}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          height="50"
+          image={shirt}
+          alt="green iguana"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h6" component="div">
+            Yellow Printed Shirt
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            MRP: <s>699</s><br />
+            OFFER PRICE: 129
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+        <Button size="small" color="primary">
+          Add to Cart
+        </Button>
+        <Button size="small" color="primary">
+          BUY
+        </Button>
+      </CardActions>
+    </Card>
+  );
 }
- 
-export default Product;

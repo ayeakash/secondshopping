@@ -1,3 +1,27 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding-top: 60px;
+  overflow: auto;
+}
+
+.grid-item {
+  margin: 5px;
+  
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.container{
+  max-width: 100%;
+  padding: 0;
+}
 
 .product-parent-div{
  width: 300px;
@@ -11,6 +35,15 @@
   
   height: 250px !important;
 } */
+
+.top-bar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  z-index: 999;
+
+}
 
 .alice-carousel__dots{
   margin: 3px !important;

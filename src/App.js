@@ -1,17 +1,10 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import './App.css';
 import NavBar from './components/navbar';
-import Banner from './components/banner';
 import Product from './components/product';
-import Arrow from './components/arrow';
 import banner from './images/banner.png'
 import Carousel from './components/subComponents/carousel';
-
-
-
-
-
+import FixedBottomNavigation from './components/subComponents/bottomNavbar';
 
 function App() {
   return (
@@ -20,9 +13,6 @@ function App() {
     <NavBar></NavBar>
       <div className='image-slide'>
         <Carousel></Carousel>
-        
-          
-        
       </div>
       <div className ="align-parent">
         <div className='align-child'>
@@ -34,11 +24,9 @@ function App() {
         <div className='align-child'>
           <Product></Product>
         </div>
-        <div className='align-child'>
-          <Product></Product>
-        </div>
+      <FixedBottomNavigation></FixedBottomNavigation>
+        
       </div>
-      <Arrow></Arrow>
 
     </div>
     </React.Fragment>

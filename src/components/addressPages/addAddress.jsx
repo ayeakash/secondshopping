@@ -28,7 +28,7 @@ const AddAddress = () => {
       noValidate
       autoComplete="off"
     >
-      <TextField id="fullWidth" label="Full Name (required)*" variant="outlined" />
+      <TextField id="fullWidth" fullWidth label="Full Name (required)*" variant="outlined" />
       <TextField id="outlined-basic" label="Phone Number (required)*" variant="outlined" />
       
       <Link>+ Add Alternate Phone Number</Link>

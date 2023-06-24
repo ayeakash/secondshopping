@@ -4,12 +4,18 @@ import MapsHomeWorkIcon from '@mui/icons-material/MapsHomeWork';
 import LanguageIcon from '@mui/icons-material/Language';
 import CallIcon from '@mui/icons-material/Call';
 import LogoutIcon from '@mui/icons-material/Logout';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 
 const sideBarItems = [
     {
       'title': 'Hello Akshay',
       'link': '/temp',
       'icon': <AccountCircleIcon/>
+    },
+    {
+      'title': 'Upload Products',
+      'link': '/new-product',
+      'icon': <CloudUploadIcon/>
     },
     {
         'title': 'Edit Profile',

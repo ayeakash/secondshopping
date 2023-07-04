@@ -365,15 +365,21 @@ p{
   gap: 3px;
 }
 
-.product-size div{
+.size-button{
   height: 45px;
   width: 45px;
   background-color: gray;
   border-radius: 25px;
-  /* box-shadow: 0 3px 3px gray; */
   text-align: center;
   padding-top: 13px;
   color: white;
+  cursor: pointer;
+}
+
+.selected{
+  background-color: rgb(255, 221, 0);
+  color: black;
+
 }
 
 .price-area{
@@ -383,6 +389,7 @@ p{
   gap: 10px;
 
 }
+
 
 .price-text{
   font-size: 1.5em;

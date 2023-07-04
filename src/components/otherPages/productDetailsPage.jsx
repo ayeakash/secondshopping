@@ -1,15 +1,20 @@
-import React, { useContext } from 'react';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import React, { useState, useContext } from 'react';
 import Carousel from '../subComponents/carousel'
 import { useNavigate, useParams } from 'react-router-dom';
-// import { ToastContainer, toast } from 'react-toastify';
 
 import productCardObject from '../../data/productCardObject';
 import { CartContext } from '../experiments/cartContext';
-
+import Sizes from '../subComponents/sizes';
 
 export default function ProductDetails (props){  
 
+  const [selectedSize, setSelectedSize] = useState('');
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size);
+  };
+
+  // navigates user to different location on site
     const navigate = useNavigate();
     const handleClick = (path, ...rest) =>{
       navigate(path);
@@ -23,24 +28,21 @@ export default function ProductDetails (props){
     const product = productCardObject[params['category']][params['id']]
       
 
-      const handleAddToCart = () => {
-        if(cartItems.indexOf(product) != -1){
-          navigate('/cart')
-          }
-        else(
-        addToCart(product)
-        )
-        // console.log(product)
-      }
+    const handleAddToCart = () => {
+      if(cartItems.indexOf(product) !== -1){
+        navigate('/cart')
+        }
+      else(
+      addToCart(product)
+      )
+    }
+
+    // const sizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL']
 
     return (
       <React.Fragment>
         <div className='product-page container page-parent'>
           <div className="product-margin">
-{/* 
-        <div className='back-icon' >
-        <ArrowBackIcon onClick={()=>handleClick('/')}></ArrowBackIcon>
-        </div> */}
         
       <div className='image-slide'>
         <Carousel 
@@ -60,16 +62,7 @@ export default function ProductDetails (props){
         <p className='price-text'>₹{productCardObject[params['category']][params['id']]['price']}</p>
         </div>
         <p>Select size:</p>
-        <div className='product-size'>
-        <div>XS</div>
-        <div>S</div>
-        <div>M</div>
-        <div>L</div>
-        <div>XL</div>
-        <div>XXL</div>
-        <div>XXXL</div>
-        
-        </div>
+       <Sizes/>
       </div>
       </div>
       </div>      

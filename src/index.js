@@ -32,6 +32,7 @@ import BuyPage from './components/buyingPages/buyPage';
 import ProfilePage from './components/otherPages/profilePage';
 import BuyConfirm from './components/buyingPages/buyConfirm';
 import PaymentsPage from './components/buyingPages/paymentsPage';
+import OrderSuccess from './components/buyingPages/orderSuccess';
 
 import UploadMainPage from './components/uploadPages/uploadMainPage';
 
@@ -70,6 +71,7 @@ root.render(
   <Route path='/cart' element={<CartPage/>}></Route>
   <Route path='/buy-now' element={<BuyConfirm/>}></Route>
   <Route path='/payments' element={<PaymentsPage/>}></Route>
+  <Route path='/success' element={<OrderSuccess/>}></Route>
   
 
   <Route path='/temp' element={<Temp/>}></Route>

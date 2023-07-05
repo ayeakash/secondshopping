@@ -379,7 +379,6 @@ p{
 .selected{
   background-color: rgb(255, 221, 0);
   color: black;
-
 }
 
 .price-area{
@@ -594,6 +593,35 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-1t8l2tu-MuiInputBase
 
 
 /* *** Order Page END ***  */
+
+
+/* payments page */
+
+.radio-button{
+  margin: 5px 20px 0px 20px;
+  /* border: 2px solid black; */
+  padding: 5px;
+  background-color: #f1f3f7;
+}
+
+.input-radio{
+  margin-right: 10px;
+}
+
+/* payments page end */
+
+.success{
+  background-color: #004fcf;
+  height: 300px;
+  width: 300px;
+  border-radius: 300px;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  color: white;
+  margin: auto;
+}
+
 
 /* **** Address Page ********** */
 

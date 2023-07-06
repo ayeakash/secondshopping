@@ -3,16 +3,16 @@ import CartItem from '../subComponents/cartItem';
 import { useNavigate } from 'react-router-dom';
 import {CartContext} from '../experiments/cartContext'
 import { ToastContainer, toast } from 'react-toastify';
+import TotalPopUp from '../subComponents/totalPopUp';
 
 export default function CartPage(){
   const { cartTotal, cartItems, removeFromCart, setCartTotal} = useContext(CartContext);
 
-    const [total, setTotal]= useState(0)
+    const [popup, setPopup] = useState(false)
     
     const navigate = useNavigate();
     const handleSubmit = (path) =>{
-      if(total === 0){
-        err()
+      if(cartTotal === 0){
       }
       else(
         navigate(path))
@@ -20,8 +20,6 @@ export default function CartPage(){
     const handleClick = (path) =>{
     navigate(path)
   }
-
-//   console.log('cart items', cartItems)
 
   const handleRemoveFromCart = (item) => {
     removeFromCart(item);
@@ -41,39 +39,17 @@ export default function CartPage(){
         }
     }
 
-    let cartSum = 'Breakdown: '
-    cartItems.map(item=>{
-      cartSum += `${item.title}: ${item.price}, `
-    })
-    
-    const notify = () => toast.info(
-      cartSum, {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",});
-
-    const err = () => toast.error(
-      'Please Add Items to the Cart', {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",});
-      
-
     const handleTotalShow = () =>{
       if(cartItems.length === 0){
-        err()
+  
       }
-      else notify()
+      if(popup == true){
+        setPopup(false)
+      }
+      if(cartTotal === 0){
+        setPopup(false)
+      }
+      else setPopup(true)
     }
 
     useEffect(() => {
@@ -81,16 +57,17 @@ export default function CartPage(){
       cartItems.forEach((item) => {
         newTotal += item.price;
       });
-      setTotal(newTotal);
+      setCartTotal(newTotal);
     }, [cartItems]);
  
     return (
         <div className='cart-parent'>
-            <div className="cart-top-bar">
+        
+            <div className="cart-top-bar" >
                 <p className='cart-bar-one'>Address: XYZ, Sarasvati sadan, Shevgaon-Georai road...</p>
                 <button className='cart-bar-two' onClick={() => handleClick('/address')}>Change</button>
             </div>
-        <div className='cart-itmes'>         
+        <div className='cart-itmes' onClick={()=>setPopup(false)}>         
         {cartItems.map((item) => (
         <div key={item.id}>
           <span>
@@ -104,26 +81,17 @@ export default function CartPage(){
             show={true}
             >
             </CartItem></span>
-        </div>
-      ))}
-
+            
         </div>
         
-          <ToastContainer
-          position="top-center"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-          />
+      ))}
 
+      
 
+        </div>
+      
         <div className="cart-bottom-bar">
+        {popup && <TotalPopUp closePopup={()=>setPopup(false)} cartItems={cartItems}/>}
             <button className='custom-button grey' onClick={handleTotalShow}>Total: ₹{cartTotal}</button>
             <button className='custom-button yellow'
              onClick={()=>handleSubmit('/buy-now')}>Proceed to buy</button>

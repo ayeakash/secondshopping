@@ -7,7 +7,9 @@ import banner from '../../data/images/banner.png'
 import banner2 from '../../data/images/banner2.png';
 import banner3 from '../../data/images/banner3.png';
 
-import {shirts, pants, shoes} from '../../data/productCardObject';
+// import {shirts, pants, shoes} from '../../data/productCardObject';
+
+import { shirts, combos, shoes } from '../../data/raybaProductCardObject';
 
 export default function HomePage(){
       return (
@@ -21,7 +23,7 @@ export default function HomePage(){
       
       <div className ="align-parent">
         <div className='align-child'>
-          <ProductCard data={pants[3]}/>
+          <ProductCard data={combos[3]}/>
         </div>
         <div className='align-child'>
           <ProductCard data={shoes[4]}/>
@@ -32,7 +34,7 @@ export default function HomePage(){
           <ProductCard data={shirts[3]}/>
         </div>
         <div className='align-child'>
-          <ProductCard data={pants[2]}/>
+          <ProductCard data={combos[2]}/>
         </div>
         </div>
       <div className ="align-parent">
@@ -48,7 +50,7 @@ export default function HomePage(){
           <ProductCard data={shirts[1]} />
         </div>
         <div className='align-child'>
-          <ProductCard data={pants[2]}/>
+          <ProductCard data={combos[2]}/>
         </div>
         </div>
         <div className ="align-parent">

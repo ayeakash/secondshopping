@@ -18,8 +18,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import HomePage from './components/otherPages/home';
 import Shirts from './components/otherPages/shirtsPage';
-import Shoes from './components/otherPages/shoesPage';
+// import Shoes from './components/otherPages/shoesPage';
+import ShoesPage from './components/otherPages/raybaShoesPage';
 import Pants from './components/otherPages/pantsPage';
+import CombosPage from './components/otherPages/comboPage';
 
 import AddressPage from './components/addressPages/addressPage';
 import AddAddress from './components/addressPages/addAddress';
@@ -52,7 +54,9 @@ root.render(
   <Route path='/address/:id' element={<AddressPage/>}></Route> 
 
   <Route path='/shirts' element={<Shirts/>}></Route>
-  <Route path='/shoes' element={<Shoes/>}></Route>
+  <Route path='/combos' element={<CombosPage/>}></Route>
+  {/* <Route path='/shoes' element={<Shoes/>}></Route> */}
+  <Route path='/shoes' element={<ShoesPage/>}></Route>
   <Route path='/pants' element={<Pants/>}></Route> 
   <Route path='/profile' element={<ProfilePage/>}></Route> 
   <Route path='/address' element={<AddressPage/>}></Route> 

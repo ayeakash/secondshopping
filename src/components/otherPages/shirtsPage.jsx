@@ -1,7 +1,8 @@
 import React from 'react';
 
 import ProductCard from '../subComponents/productCard';
-import {shirts} from '../../data/productCardList'
+// import {shirts} from '../../data/productCardList'
+import {shirts} from '../../data/raybaProductList'
 
 const ShirtsPage = () => {
     return ( 

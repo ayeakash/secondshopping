@@ -1,7 +1,9 @@
 import React from 'react';
 import Category from '../subComponents/category';
 
-import {shirts, pants, shoes} from '../../data/productCardObject'
+// import {shirts, pants, shoes} from '../../data/productCardObject'
+
+import { shirts, combos, shoes } from '../../data/raybaProductCardObject';
 
 
 import { useNavigate } from 'react-router-dom';
@@ -37,18 +39,18 @@ export default function Categories(){
 
                 <div className="bar "><p className='center'>Pants</p></div>
 
-                <div className="row-one" onClick={()=>handleClick('/pants')} >
+                <div className="row-one" onClick={()=>handleClick('/combos')} >
                 <div className='grid-first-child'>
-                <Category title="Formal" image={pants[1]['image']}/>
+                <Category title="Formal" image={combos[1]['image']}/>
                 </div>
                 <div className='grid-first-child'>
-                <Category title="Professional" image={pants[2]['image']}/>
+                <Category title="Professional" image={combos[2]['image']}/>
                 </div>
                 <div className='grid-first-child'>
-                <Category title="Jeans" image={pants[3]['image']}/>
+                <Category title="Jeans" image={combos[3]['image']}/>
                 </div>
                 <div className='grid-first-child'>
-                <Category title="Casual" image={pants[4]['image']}/>
+                <Category title="Casual" image={combos[4]['image']}/>
                 </div>
                 </div>
 

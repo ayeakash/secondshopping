@@ -23,7 +23,7 @@ export default function HomePage(){
       
       <div className ="align-parent">
         <div className='align-child'>
-          <ProductCard data={combos[3]}/>
+          <ProductCard data={shirts[3]}/>
         </div>
         <div className='align-child'>
           <ProductCard data={shoes[4]}/>
@@ -31,10 +31,10 @@ export default function HomePage(){
         </div>
       <div className ="align-parent">
         <div className='align-child'>
-          <ProductCard data={shirts[3]}/>
+          <ProductCard data={combos[3]}/>
         </div>
         <div className='align-child'>
-          <ProductCard data={combos[2]}/>
+          <ProductCard data={shirts[6]}/>
         </div>
         </div>
       <div className ="align-parent">
@@ -55,7 +55,7 @@ export default function HomePage(){
         </div>
         <div className ="align-parent">
         <div className='align-child'>
-          <ProductCard data={shoes[3]}/>
+          <ProductCard data={shoes[2]}/>
         </div>
         <div className='align-child'>
           <ProductCard data={shirts[4]}/>

@@ -429,6 +429,11 @@ p{
   
 }
 
+.buy-link{
+  width: 100%;
+  height: 100%;
+}
+
 .total-popup{
   width: 100vw;
   height: 150px;

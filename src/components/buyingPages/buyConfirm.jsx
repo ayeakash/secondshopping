@@ -3,7 +3,7 @@ import ProgressStepper from './progressStepper';
 import AddressCard from '../addressPages/addressCard';
 import CartItem from '../subComponents/cartItem';
 import PriceBreakDown from './priceBreakDown';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link, useLinkClickHandler } from 'react-router-dom';
 // import { ToastContainer, toast } from 'react-toastify';
 
 import { addressObject } from '../../data/addressObject';
@@ -51,8 +51,11 @@ const BuyConfirm = (props) => {
         </div>
         <div className="cart-bottom-bar">
             <button className='custom-button grey'>Total: ₹{cartTotal}</button>
-            <button className='custom-button yellow'
-             onClick={()=>handleClick('/payments')}>Proceed to buy</button>
+            <Link to='https://business.paytm.com/demo/js-checkout' >
+            <button className='custom-button yellow buy-link'
+            //  onClick={()=>handleClick('')}
+             >Proceed to buy</button>
+             </Link>
         </div>
     </div>
      );

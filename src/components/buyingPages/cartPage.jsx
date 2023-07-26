@@ -2,7 +2,6 @@ import React, { useContext, useState, useEffect} from 'react';
 import CartItem from '../subComponents/cartItem';
 import { useNavigate } from 'react-router-dom';
 import {CartContext} from '../experiments/cartContext'
-import { ToastContainer, toast } from 'react-toastify';
 import TotalPopUp from '../subComponents/totalPopUp';
 
 export default function CartPage(){
